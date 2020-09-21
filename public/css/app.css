@@ -1,0 +1,41 @@
+#content {
+  background-color: purple;
+}
+
+img {
+  height: 400px;
+  width: 400px;
+}
+
+footer {
+  background-color: red;
+}
+
+#logo {
+  display: block;
+  margin: 0 auto;
+}
+
+#nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 2R0px;
+}
+
+#nav div {
+  margin-right: 10px;
+}
+
+.img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.blocco {
+  height: auto;
+}
+

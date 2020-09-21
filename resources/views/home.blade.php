@@ -1,13 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>PROVA</h1>
-    <h2>ciao</h2>
-</body>
-</html>
+@extends('layouts/main-layout')
+
+@section ('logo')
+<img id="logo" src="{{('images/marchio-sito-test.png')}}" alt="">
+@endsection
+
+
+@section ('content')
+  
+
+<h1>LE LUNGHE</h1>
+@foreach ($data as $d)
+<div class="blocco">
+
+    @if ($d['tipo'] == 'lunga')
+        <h2>{{$d['titolo']}}</h2>
+        <img src="{{$d['src']}}" alt="">
+        @endif
+    </div>
+    @endforeach
+
+    
+    <H2>LE CORTE</H2>
+    
+    
+    
+      @foreach ($data as $d)
+      <div class="blocco">
+      @if ($d['tipo'] == 'corta')
+      <h2>{{$d['titolo']}}</h2>
+      <img src="{{$d['src']}}" alt="">
+      @endif
+      </div>
+      @endforeach
+    
+    <H2>LE CORTISSIME</H2>
+
+    @endsection
